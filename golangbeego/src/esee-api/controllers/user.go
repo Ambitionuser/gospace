@@ -1,8 +1,12 @@
 package controllers
 
 import (
+	"context"
 	"encoding/json"
 	"esee-api/models"
+	"esee-api/util"
+	"fmt"
+	"gopkg.in/olivere/elastic.v5"
 
 	"github.com/astaxie/beego"
 )
@@ -13,16 +17,25 @@ type UserController struct {
 }
 
 // @Title CreateUser
-// @Description create users
-// @Param	body		body 	models.User	true		"body for user content"
+// @Description 测试es
 // @Success 200 {int} models.User.Id
 // @Failure 403 body is empty
 // @router / [post]
 func (u *UserController) Post() {
-	var user models.User
-	json.Unmarshal(u.Ctx.Input.RequestBody, &user)
-	uid := models.AddUser(user)
-	u.Data["json"] = map[string]string{"uid": uid}
+
+	var res *elastic.SearchResult
+	var err error
+	query := elastic.NewQueryStringQuery("user:Jame3")
+	res, err = util.Client.Search("esee").
+		Type("ci").
+		Sort("age", true).
+		Size(20).
+		Query(query).
+		Pretty(true).
+		SearchAfter("329").
+		Do(context.Background())
+	fmt.Println(err)
+	u.Data["json"] = res
 	u.ServeJSON()
 }
 
