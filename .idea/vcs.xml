@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golangbeego/src/github.com/astaxie/beego" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golangbeego/src/github.com/beego/bee" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golangbeego/src/github.com/bouk/monkey" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golangbeego/src/github.com/jtolds/gls" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golangbeego/src/github.com/mailru/easyjson" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golangbeego/src/github.com/pkg/errors" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golangbeego/src/github.com/shiena/ansicolor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golangbeego/src/github.com/smartystreets/assertions" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golangbeego/src/github.com/smartystreets/goconvey" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/golangbeego/src/gopkg.in/olivere/elastic.v5" vcs="Git" />
+  </component>
+</project>
